@@ -6,3 +6,4 @@ install:
 script:
   - msbuild /p:Configuration=Engine3D/Engine3D.sln
   - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./3DEngine.Tests/bin/Release/3DEngine.Tests.dll
+os: windows
