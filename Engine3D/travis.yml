@@ -5,3 +5,9 @@ mono:
   - 3.12.0
   - 3.10.0
 os: windows
+install:
+  - nuget restore Engine3D.sln
+  - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
+script:
+  - msbuild /p:Configuration=Release Engine3D.sln
+  - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./MyProject.Tests/bin/Release/MyProject.Tests.dll
