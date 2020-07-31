@@ -58,6 +58,8 @@
     <Compile Include="Data\Textures\Texture.cs" />
     <Compile Include="Data\Utils\ShaderUtils.cs" />
     <Compile Include="Data\Vertex.cs" />
+    <Compile Include="Data\World\IScene.cs" />
+    <Compile Include="Data\World\Scene.cs" />
     <Compile Include="Exceptions\Shaders\ProgramNotFoundException.cs" />
     <Compile Include="Exceptions\Shaders\ShaderCleaningException.cs" />
     <Compile Include="Exceptions\Shaders\ShaderCompilationException.cs" />
