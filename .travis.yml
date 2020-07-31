@@ -1,9 +1,5 @@
 ﻿language: csharp
 solution: Engine3D.sln
-mono:
-  - latest
-  - 3.12.0
-  - 3.10.0
 os: windows
 install:
   - sudo apt-get install nunit-console
