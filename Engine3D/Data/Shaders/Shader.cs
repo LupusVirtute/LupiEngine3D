@@ -58,11 +58,10 @@ namespace Engine3D.Data.Shaders
 		public void Use()
 		{
 			if (_ID != -1)
-			{
 				GL.UseProgram(_ID);
-			}
+			else
+				throw new ProgramNotFoundException();
 		}
-
 		public void Dispose()
 		{
 			Dispose(true);

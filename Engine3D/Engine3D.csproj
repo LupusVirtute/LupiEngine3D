@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="OpenTK, Version=3.2.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
@@ -49,16 +51,19 @@
     <Compile Include="Data\Objects3D\Entity.cs" />
     <Compile Include="Data\Objects3D\IEntity.cs" />
     <Compile Include="Data\Objects3D\Mesh\IMesh3D.cs" />
+    <Compile Include="Data\Objects3D\ObjectMeshInfo.cs" />
     <Compile Include="Data\Shaders\IShader.cs" />
     <Compile Include="Data\Shaders\Shader.cs" />
     <Compile Include="Data\Textures\ITexture.cs" />
     <Compile Include="Data\Textures\Texture.cs" />
+    <Compile Include="Data\Utils\ShaderUtils.cs" />
     <Compile Include="Data\Vertex.cs" />
     <Compile Include="Exceptions\Shaders\ProgramNotFoundException.cs" />
     <Compile Include="Exceptions\Shaders\ShaderCleaningException.cs" />
     <Compile Include="Exceptions\Shaders\ShaderCompilationException.cs" />
     <Compile Include="Exceptions\Shaders\ShaderSourceNullException.cs" />
-    <Compile Include="MainGame.cs" />
+    <Compile Include="Files\FileDataManagment.cs" />
+    <Compile Include="LupiEngineWindow.cs" />
     <Compile Include="Managers\Render\IRenderer.cs" />
     <Compile Include="Managers\Render\RenderManager.cs" />
     <Compile Include="Data\Objects3D\Mesh\Mesh3D.cs" />
@@ -69,6 +74,8 @@
     <None Include="App.config" />
     <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />
+    <None Include="Shaders\fragShader.frag" />
+    <None Include="Shaders\verShader.vert" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

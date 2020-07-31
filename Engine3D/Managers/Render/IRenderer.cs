@@ -1,9 +1,10 @@
 ﻿using System;
+using OpenTK;
 
 namespace Engine3D.Managers.Render
 {
 	public interface IRenderer : IDisposable
 	{
-		void Render();
+		void Render(FrameEventArgs ev);
 	}
 }
