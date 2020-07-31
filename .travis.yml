@@ -1,10 +1,6 @@
 ﻿language: csharp
 solution: Engine3D.sln
-os: windows
-install:
-  - sudo apt-get install nunit-console
-  - nuget restore ./Engine3D.sln
-
+mono: latest
 script:
-  - xbuild ./Engine3D.sln
-  - nunit-console ./Engine3D/bin/Release/Engine3D.exe
+  - msbuild /t:Restore
+  - msbuild /p:Configuration=Release
