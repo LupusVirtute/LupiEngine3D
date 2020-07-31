@@ -1,0 +1,8 @@
+﻿language: csharp
+solution: Engine3D.sln
+install:
+  - nuget restore Engine3D.sln
+  - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
+script:
+  - msbuild /p:Configuration=Engine3D.sln
+  - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./3DEngine.Tests/bin/Release/3DEngine.Tests.dll
