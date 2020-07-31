@@ -4,3 +4,5 @@ mono: latest
 script:
   - msbuild /t:Restore
   - msbuild /p:Configuration=Release
+  - dotnet restore
+  - dotnet test
