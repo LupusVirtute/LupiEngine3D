@@ -1,10 +1,16 @@
 ﻿language: csharp
 solution: Engine3D.sln
-mono: latest
-install:
-  - nuget restore Engine3D.sln
-  - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
-  - mono ./testrunner/xunit.runners.1.9.2/tools/xunit.console.clr4.exe ./MyProject.Tests/bin/Release/MyProject.Tests.dll
+#mono: latest
+mono: none
+dotnet: 4.7.2
+dist: trusty
 script:
-  - msbuild /t:Restore
-  - msbuild /p:Configuration=Release
+ - dotnet restore
+ - dotnet build
+#install:
+#  - nuget restore Engine3D.sln
+#  - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
+#  - mono ./testrunner/xunit.runners.1.9.2/tools/xunit.console.clr4.exe ./MyProject.Tests/bin/Release/MyProject.Tests.dll
+#script:
+#  - msbuild /t:Restore
+#  - msbuild /p:Configuration=Release
