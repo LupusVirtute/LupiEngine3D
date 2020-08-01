@@ -1,6 +1,6 @@
 ﻿language: csharp
 solution: Engine3D.sln
-dotnet: 2.1.502
+dotnet: 3.1
 install:
   - nuget restore Engine3D.sln
   - msbuild /p:Configuration=Release Engine3D.sln
