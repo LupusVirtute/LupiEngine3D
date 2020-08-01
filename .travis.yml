@@ -2,7 +2,7 @@
 solution: Engine3D.sln
 #mono: latest
 mono: none
-dotnet: 4.7.2
+dotnet: 4.7
 dist: trusty
 script:
  - dotnet restore
