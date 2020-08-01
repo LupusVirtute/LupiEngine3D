@@ -58,7 +58,6 @@
 language: csharp
 solution: Engine3D.sln
 dotnet: 3.1
-mono: none
 install:
   - nuget restore Engine3D.sln
   - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
