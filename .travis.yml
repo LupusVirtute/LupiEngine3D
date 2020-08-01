@@ -2,7 +2,7 @@
 solution: Engine3D.sln
 os: windows
 ##mono: latest
-#mono: none
+mono: none
 install:
   - powershell
   - Install-WindowsFeature Net-Framework-Core -source \\network\share\sxs
