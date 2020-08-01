@@ -1,8 +1,8 @@
 ﻿language: csharp
 solution: Engine3D.sln
 script:
-  - msbuild msbuild /p:Configuration=Release /ShaderUnitTest/ShaderUnitTest.csproj
-  - msbuild msbuild /p:Configuration=Release Engine3D.sln
+  - msbuild /p:Configuration=Release /ShaderUnitTest/ShaderUnitTest.csproj
+  - msbuild /p:Configuration=Release Engine3D.sln
 ##mono: latest
 #mono: none
 #install:
