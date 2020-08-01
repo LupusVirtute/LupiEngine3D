@@ -8,4 +8,4 @@ install:
 script:
  - dotnet restore
  - dotnet test
-  - mono ./testrunner/xunit.runners.1.9.2/tools/xunit.console.clr4.exe ./ShaderUnitTest/bin/Release/netcoreapp3.1/ShaderUnitTest.dll
+ - mono ./testrunner/xunit.runners.1.9.2/tools/xunit.console.clr4.exe ./ShaderUnitTest/bin/Release/netcoreapp3.1/ShaderUnitTest.dll
