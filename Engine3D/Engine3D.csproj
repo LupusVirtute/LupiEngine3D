@@ -87,7 +87,6 @@
   <ItemGroup>
     <PackageReference Include="NuGet.Build.Tasks.Pack" Version="4.0.0" PrivateAssets="All" />
   </ItemGroup>
-  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
