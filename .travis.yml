@@ -1,10 +1,2 @@
 ﻿language: csharp
 solution: Engine3D.sln
-
-install:
-  - sudo apt-get install nunit-console
-  - nuget restore Engine3D.sln
-
-script:
-  - xbuild 3DEngine.sln
-  - nunit-console ./ShaderUnitTest/bin/Debug/ShaderUnitTest.dll
