@@ -1,2 +1,9 @@
 ﻿language: csharp
 solution: Engine3D.sln
+dotnet: 2.1.502
+install:
+  - msbuild /p:Configuration=Release solution-name.sln
+  - mono ./testrunner/xunit.runners.1.9.2/tools/xunit.console.clr4.exe ./ShaderUnitTest/bin/Release/netcoreapp3.1/ShaderUnitTest.dll
+script:
+ - dotnet restore
+ - dotnet test
