@@ -4,6 +4,8 @@ script:
   - msbuild /p:Configuration=Release Engine3D.sln
   - dotnet restore
   - dotnet test
+  - msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration
+  - $pfx_cert_byte = [System.Convert]::FromBase64String("${{ secrets.Base64_Encoded_Pfx }}")
 ##mono: latest
 #mono: none
 install:
@@ -13,7 +15,7 @@ install:
   - sudo apt-get install -y apt-transport-https
   - sudo apt-get update
   - sudo apt-get install -y dotnet-sdk-3.1
-#
+
 #script:
 # - dotnet restore
 # - dotnet build
