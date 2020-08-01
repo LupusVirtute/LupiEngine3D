@@ -3,11 +3,7 @@ solution: Engine3D.sln
 os: windows
 ##mono: latest
 mono: none
-install:
-  - Install-WindowsFeature Net-Framework-Core -source \\network\share\sxs
-  - Get-WindowsFeature
-script:
-  - msbuild Engine3D.sln /t:Rebuild /p:Configuration=Release /p:Platform="any cpu"
+
 #script:
 # - dotnet restore
 # - dotnet build
