@@ -13,10 +13,6 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
-  <PropertyGroup>
-    <NuGetBuildTasksPackTargets>junk-value-to-avoid-conflicts</NuGetBuildTasksPackTargets>
-  </PropertyGroup>
-  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
@@ -83,9 +79,6 @@
     <None Include="Shaders\fragShader.frag" />
     <None Include="Shaders\verShader.vert" />
     <None Include="travis.yml" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="NuGet.Build.Tasks.Pack" Version="4.0.0" PrivateAssets="All" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
