@@ -4,7 +4,8 @@ dotnet: 3.1
 install:
   - nuget restore Engine3D.sln
   - msbuild /p:Configuration=Release Engine3D.sln
-  - mono ./testrunner/xunit.runners.1.9.2/tools/xunit.console.clr4.exe ./ShaderUnitTest/bin/Release/netcoreapp3.1/ShaderUnitTest.dll
+  - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
 script:
  - dotnet restore
  - dotnet test
+  - mono ./testrunner/xunit.runners.1.9.2/tools/xunit.console.clr4.exe ./ShaderUnitTest/bin/Release/netcoreapp3.1/ShaderUnitTest.dll
