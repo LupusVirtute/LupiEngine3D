@@ -3,7 +3,7 @@ solution: Engine3D.sln
 
 install:
   - sudo apt-get install nunit-console
-  - nuget restore 3DEngine.sln
+  - nuget restore Engine3D.sln
 
 script:
   - xbuild 3DEngine.sln
