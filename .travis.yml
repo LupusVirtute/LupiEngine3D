@@ -4,7 +4,6 @@ os: windows
 ##mono: latest
 mono: none
 install:
-  - powershell
   - Install-WindowsFeature Net-Framework-Core -source \\network\share\sxs
   - Get-WindowsFeature
 script:
