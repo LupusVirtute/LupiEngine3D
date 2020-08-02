@@ -1,4 +1,3 @@
-C:\Users\laysy\source\repos\Engine3D\ShaderUnitTest\obj\Debug\netcoreapp3.1\ShaderUnitTest.csprojAssemblyReference.cache
 C:\Users\laysy\source\repos\Engine3D\ShaderUnitTest\obj\Debug\netcoreapp3.1\ShaderUnitTest.AssemblyInfoInputs.cache
 C:\Users\laysy\source\repos\Engine3D\ShaderUnitTest\obj\Debug\netcoreapp3.1\ShaderUnitTest.AssemblyInfo.cs
 C:\Users\laysy\source\repos\Engine3D\ShaderUnitTest\obj\Debug\netcoreapp3.1\ShaderUnitTest.csproj.CoreCompileInputs.cache
@@ -100,3 +99,4 @@ C:\Users\laysy\source\repos\Engine3D\ShaderUnitTest\obj\Debug\netcoreapp3.1\Shad
 C:\Users\laysy\source\repos\Engine3D\ShaderUnitTest\obj\Debug\netcoreapp3.1\ShaderUnitTest.dll
 C:\Users\laysy\source\repos\Engine3D\ShaderUnitTest\obj\Debug\netcoreapp3.1\ShaderUnitTest.pdb
 C:\Users\laysy\source\repos\Engine3D\ShaderUnitTest\obj\Debug\netcoreapp3.1\ShaderUnitTest.genruntimeconfig.cache
+C:\Users\laysy\source\repos\Engine3D\ShaderUnitTest\obj\Debug\netcoreapp3.1\ShaderUnitTest.csprojAssemblyReference.cache
