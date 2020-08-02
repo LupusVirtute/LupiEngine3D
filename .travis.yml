@@ -57,3 +57,10 @@
 
 language: csharp
 solution: Engine3D.sln
+mono: none
+dotnet: 3.1
+install:
+  - dotnet restore
+script:
+  - dotnet build
+  - dotnet test
