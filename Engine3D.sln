@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engine3D", "Engine3D\Engine3D.csproj", "{B3627162-E323-48B9-B39D-3C036A50AC20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShaderUnitTest", "ShaderUnitTest\ShaderUnitTest.csproj", "{63F0F32D-302D-4E8F-A9ED-2983C17CFB4A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShaderUnitTests", "ShaderUnitTests\ShaderUnitTests.csproj", "{44F24F63-D667-424B-A52F-F9DD34E58C24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{B3627162-E323-48B9-B39D-3C036A50AC20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3627162-E323-48B9-B39D-3C036A50AC20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3627162-E323-48B9-B39D-3C036A50AC20}.Release|Any CPU.Build.0 = Release|Any CPU
-		{63F0F32D-302D-4E8F-A9ED-2983C17CFB4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{63F0F32D-302D-4E8F-A9ED-2983C17CFB4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{63F0F32D-302D-4E8F-A9ED-2983C17CFB4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{63F0F32D-302D-4E8F-A9ED-2983C17CFB4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44F24F63-D667-424B-A52F-F9DD34E58C24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44F24F63-D667-424B-A52F-F9DD34E58C24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44F24F63-D667-424B-A52F-F9DD34E58C24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44F24F63-D667-424B-A52F-F9DD34E58C24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

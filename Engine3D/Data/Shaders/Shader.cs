@@ -9,7 +9,7 @@ namespace Engine3D.Data.Shaders
 	public class Shader : IShader
 	{
 		
-		private int _ID;
+		private int _ID  = -1;
 		private string vertexShaderSource;
 		private string fragShaderSource;
 		private bool disposed = false;
@@ -50,7 +50,11 @@ namespace Engine3D.Data.Shaders
 
 		~Shader()
 		{
-			GL.DeleteProgram(_ID);
+			if (_ID != -1)
+			{
+				GL.DeleteProgram(_ID);
+				
+			}
 		}
 		/// <summary>
 		/// Uses a Shader program
