@@ -77,7 +77,6 @@
     <None Include="packages.config" />
     <None Include="Shaders\fragShader.frag" />
     <None Include="Shaders\verShader.vert" />
-    <None Include="travis.yml" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
