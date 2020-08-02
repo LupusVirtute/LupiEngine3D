@@ -9,23 +9,8 @@ namespace Engine3D.Data.World
     {
 	    private bool disposed;
 
-	    private List<IEntity> _entities;
-	    private string _sceneName;
+	    private List<IEntity> entities;
 
-	    public Scene(IEntity[] entities,string sceneName)
-	    {
-		    _sceneName = sceneName;
-			_entities = new List<IEntity>();
-		    for (var i = 0; i < entities.Length; i++)
-		    {
-				if (entities[i] != null)
-					_entities.Add(entities[i]);
-#if DEBUG
-				else
-					Console.WriteLine("Entity nr "+i+" from scene " + sceneName + " failed to load properly");
-#endif
-		    }
-	    }
 	    public void Dispose()
 	    {
 			Dispose(true);
@@ -40,7 +25,7 @@ namespace Engine3D.Data.World
 	    {
 		    if (entity == null)
 			    return false;
-			_entities.Add(entity);
+			entities.Add(entity);
 			return true;
 	    }
 
@@ -48,7 +33,7 @@ namespace Engine3D.Data.World
 		{
 			if (entity == null)
 				return false;
-			_entities.Remove(entity);
+			entities.Remove(entity);
 			return true;
 		}
 
@@ -58,9 +43,9 @@ namespace Engine3D.Data.World
 		    {
 			    if (disposing)
 			    {
-				    for (int i = 0; i < _entities.Count; i++)
+				    for (int i = 0; i < entities.Count; i++)
 				    {
-					    _entities[i].Dispose();
+					    entities[i].Dispose();
 				    }
 				    disposed = true;
 			    }
@@ -74,9 +59,9 @@ namespace Engine3D.Data.World
 
 	    public void Render()
 	    {
-		    for (int i = 0; i < _entities.Count; i++)
+		    for (int i = 0; i < entities.Count; i++)
 		    {
-			    _entities[i].Draw();
+			    entities[i].Draw();
 		    }
 	    }
     }
