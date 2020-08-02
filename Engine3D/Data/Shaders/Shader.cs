@@ -2,6 +2,7 @@
 using OpenTK.Graphics.OpenGL4;
 using System;
 using System.IO;
+using System.Text;
 using System.Threading;
 
 namespace Engine3D.Data.Shaders
@@ -19,6 +20,40 @@ namespace Engine3D.Data.Shaders
 		public int ID
 		{
 			get => _ID;
+		}
+		/// <summary>
+		/// Creates shader object from shader source
+		/// </summary>
+		/// <param name="shaders">Source Code of shaders</param>
+		public Shader(ShaderSource[] shaders)
+		{
+			StringBuilder fragBuilder = new StringBuilder();
+			StringBuilder vertexBuilder = new StringBuilder();
+			for (int i = 0; i < shaders.Length; i++)
+			{
+				switch (shaders[i].type)
+				{
+					case ShaderType.FragmentShader:
+						fragBuilder.Append(shaders[i].Source);
+						break;
+					case ShaderType.VertexShader:
+						vertexBuilder.Append(shaders[i].Source);
+						break;
+					case ShaderType.GeometryShader:
+						break;
+					case ShaderType.TessEvaluationShader:
+						break;
+					case ShaderType.TessControlShader:
+						break;
+					case ShaderType.ComputeShader:
+						break;
+					default:
+						throw new ArgumentOutOfRangeException();
+				}
+			}
+
+			vertexShaderSource = vertexBuilder.ToString();
+			fragShaderSource = fragBuilder.ToString();
 		}
 		/// <summary>
 		/// Constructs a new Shader to use with 3D Objects

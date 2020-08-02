@@ -2,6 +2,7 @@
 using Engine3D.Data.Shaders;
 using Engine3D.Files;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenTK.Graphics.OpenGL4;
 
 namespace ShaderUnitTests
 {
@@ -36,8 +37,25 @@ namespace ShaderUnitTests
 			[TestMethod]
 			public void ShaderConstructor_Success_ShaderCreated()
 			{
+				ShaderSource[] sources = new ShaderSource[]
+				{
+					new ShaderSource(
+						"#version 450\n" +
+						"void main(){\n" +
+						"}"
+						,
+						ShaderType.FragmentShader
+						),
+					new ShaderSource(
+						"#version 450\n" +
+						"void main(){\n" +
+						"}"
+						,
+						ShaderType.VertexShader
+						), 
+				};
 				NUnit.Framework.Assert.DoesNotThrow(
-				() => new Shader(_verShaderPath, _fragShaderPath)
+					() => new Shader(sources)
 				);
 			}
 
