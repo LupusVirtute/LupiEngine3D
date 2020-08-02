@@ -48,6 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="1.0.0" />
+    <DotNetCliToolReference Include="BundlerMinifier.Core" Version="2.2.281" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Data\Objects3D\Entity.cs" />
     <Compile Include="Data\Objects3D\IEntity.cs" />
     <Compile Include="Data\Objects3D\Mesh\IMesh3D.cs" />
