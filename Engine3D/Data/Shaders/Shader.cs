@@ -3,7 +3,6 @@ using OpenTK.Graphics.OpenGL4;
 using System;
 using System.IO;
 using System.Text;
-using System.Threading;
 
 namespace Engine3D.Data.Shaders
 {

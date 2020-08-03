@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using OpenTK.Graphics.OpenGL4;
 
 namespace Engine3D.Data.Shaders
@@ -23,5 +24,9 @@ namespace Engine3D.Data.Shaders
 		    _shaderType = type;
 	    }
 
+	    public static ShaderSource LoadSourceFromFile(string path,ShaderType type)
+	    {
+			return new ShaderSource(new StreamReader(path).ReadToEnd(), type);
+	    }
     }
 }

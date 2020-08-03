@@ -57,7 +57,6 @@
     <Compile Include="Data\Shaders\ShaderSource.cs" />
     <Compile Include="Data\Textures\ITexture.cs" />
     <Compile Include="Data\Textures\Texture.cs" />
-    <Compile Include="Data\Utils\ShaderUtils.cs" />
     <Compile Include="Data\Vertex.cs" />
     <Compile Include="Data\World\IScene.cs" />
     <Compile Include="Data\World\Scene.cs" />
@@ -67,6 +66,10 @@
     <Compile Include="Exceptions\Shaders\ShaderSourceNullException.cs" />
     <Compile Include="Files\FileDataManagment.cs" />
     <Compile Include="LupiEngineWindow.cs" />
+    <Compile Include="Managers\Inputs\IKeyboardManager.cs" />
+    <Compile Include="Managers\Inputs\KeyboardManager.cs" />
+    <Compile Include="Managers\Inputs\KeyInputs\IKeyInput.cs" />
+    <Compile Include="Managers\Inputs\KeyInputs\KeyInput.cs" />
     <Compile Include="Managers\Render\IRenderer.cs" />
     <Compile Include="Managers\Render\RenderManager.cs" />
     <Compile Include="Data\Objects3D\Mesh\Mesh3D.cs" />
@@ -77,9 +80,11 @@
     <None Include="App.config" />
     <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />
-    <None Include="Shaders\fragShader.frag" />
-    <None Include="Shaders\verShader.vert" />
+    <None Include="Shaders\MainShader\fragShader.frag" />
+    <None Include="Shaders\MainShader\verShader.vert" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Data\Utils\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
