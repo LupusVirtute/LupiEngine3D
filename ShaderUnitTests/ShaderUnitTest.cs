@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using Engine3D.Data.Shaders;
 using Engine3D.Files;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -42,21 +43,26 @@ namespace ShaderUnitTests
 					new ShaderSource(
 						"#version 450\n" +
 						"void main(){\n" +
-						"}"
+						"}\0"
 						,
 						ShaderType.FragmentShader
-						),
+					),
 					new ShaderSource(
 						"#version 450\n" +
 						"void main(){\n" +
-						"}"
+						"}\0"
 						,
 						ShaderType.VertexShader
-						), 
+					), 
 				};
-				NUnit.Framework.Assert.DoesNotThrow(
-					() => new Shader(sources)
-				);
+				try
+				{
+					Shader shader = new Shader(sources);
+				}
+				catch (Exception ex)
+				{
+					Assert.Fail();
+				}
 			}
 
 		}
