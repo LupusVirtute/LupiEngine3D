@@ -38,6 +38,9 @@
     <Reference Include="OpenTK, Version=3.2.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
       <HintPath>..\packages\OpenTK.3.2\lib\net20\OpenTK.dll</HintPath>
     </Reference>
+    <Reference Include="protobuf-net, Version=2.1.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.2.1.0\lib\net451\protobuf-net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Classificators\ObjectClassifier.cs" />
     <Compile Include="Data\Objects3D\Entity.cs" />
     <Compile Include="Data\Objects3D\IEntity.cs" />
     <Compile Include="Data\Objects3D\Mesh\IMesh3D.cs" />
@@ -65,6 +69,9 @@
     <Compile Include="Exceptions\Shaders\ShaderCompilationException.cs" />
     <Compile Include="Exceptions\Shaders\ShaderSourceNullException.cs" />
     <Compile Include="Files\FileDataManagment.cs" />
+    <Compile Include="Loading\ILoader.cs" />
+    <Compile Include="Loading\Loader.cs" />
+    <Compile Include="Loading\SceneLoaders\SceneLoader.cs" />
     <Compile Include="LupiEngineWindow.cs" />
     <Compile Include="Managers\Inputs\IKeyboardManager.cs" />
     <Compile Include="Managers\Inputs\KeyboardManager.cs" />

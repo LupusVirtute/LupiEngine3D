@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Engine3D.Data.Shaders;
 using Engine3D.Data.Textures;
 using OpenTK.Graphics.OpenGL4;
+using ProtoBuf;
 
 namespace Engine3D.Data.Objects3D.Mesh
 {
+	[ProtoContract( Name = "mesh")]
 	public class Mesh3D : IMesh3D
 	{
 		// Disposed value
@@ -13,8 +16,9 @@ namespace Engine3D.Data.Objects3D.Mesh
 		private bool disposed = false;
 
 		// Mesh values
-
+		[ProtoMember(1)]
 		private readonly List<Vertex> vertices;
+		[ProtoMember(2)]
 		private readonly List<uint> indices;
 		private bool isElementBuffer;
 

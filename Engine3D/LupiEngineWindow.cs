@@ -1,4 +1,5 @@
 ﻿using System;
+using Engine3D.Managers.Inputs;
 using Engine3D.Managers.Render;
 using OpenTK;
 using OpenTK.Graphics;
@@ -9,9 +10,10 @@ namespace Engine3D
 	public class LupiEngineWindow : OpenTK.GameWindow
 	{
 		private IRenderer renderManager;
-		public LupiEngineWindow(string title, OpenTK.GameWindowFlags GameWindowFlags) : base(1366, 768, new GraphicsMode(), title, GameWindowFlags,DisplayDevice.Default,4,5,GraphicsContextFlags.Default)
+		public LupiEngineWindow(IRenderer renderManager,IKeyboardManager keyboardManager,string title, OpenTK.GameWindowFlags GameWindowFlags) : base(1366, 768, new GraphicsMode(), title, GameWindowFlags,DisplayDevice.Default,4,5,GraphicsContextFlags.Default)
 		{
-			renderManager = new RenderManager();
+			this.renderManager = renderManager;
+			this.KeyDown += keyboardManager.Handle;
 		}
 
 		protected override void Dispose(bool manual)
