@@ -1,10 +1,10 @@
 ﻿using System;
-using OpenTK;
+using OpenTK.Input;
 
 namespace Engine3D.Managers.Render
 {
 	public interface IRenderer : IDisposable
 	{
-		void Render(FrameEventArgs ev);
+		void Render(object sender, KeyboardKeyEventArgs arg);
 	}
 }

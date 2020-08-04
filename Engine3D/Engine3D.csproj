@@ -23,6 +23,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +34,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="OpenTK, Version=3.2.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
@@ -51,7 +53,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\Classificators\ObjectClassifier.cs" />
     <Compile Include="Data\Objects3D\Entity.cs" />
     <Compile Include="Data\Objects3D\IEntity.cs" />
     <Compile Include="Data\Objects3D\Mesh\IMesh3D.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Managers\Inputs\KeyboardManager.cs" />
     <Compile Include="Managers\Inputs\KeyInputs\IKeyInput.cs" />
     <Compile Include="Managers\Inputs\KeyInputs\KeyInput.cs" />
+    <Compile Include="Managers\Inputs\TestKey.cs" />
     <Compile Include="Managers\Render\IRenderer.cs" />
     <Compile Include="Managers\Render\RenderManager.cs" />
     <Compile Include="Data\Objects3D\Mesh\Mesh3D.cs" />
@@ -91,6 +93,7 @@
     <None Include="Shaders\MainShader\verShader.vert" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Data\Classificators\" />
     <Folder Include="Data\Utils\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

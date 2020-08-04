@@ -7,7 +7,8 @@ namespace Engine3D.Managers.Inputs
 {
     public class KeyboardManager : IKeyboardManager
     {
-	    private Dictionary<Key, IKeyInput> keys = new Dictionary<Key, IKeyInput>();
+	    private delegate void RunKey();
+	    private Dictionary<Key, RunKey> keys = new Dictionary<Key, RunKey>();
 
 	    public KeyboardManager()
 	    {
@@ -25,22 +26,54 @@ namespace Engine3D.Managers.Inputs
 			    {
 				    continue;
 			    }
-			    this.keys.Add(keyInput.key,keyInput);
+
+			    RunKey runKey = new RunKey(keyInput.run);
+			    this.keys.Add(keyInput.key,runKey);
 		    }
 	    }
-	    public bool Handle(Key triggeredKey)
+	    public void Handle(object sender,KeyboardKeyEventArgs ev)
 	    {
+		    Key k = ev.Key;
 		    try
 		    {
-			    keys[triggeredKey].run();
+			    keys[k].Invoke();
 		    }
-		    catch (KeyNotFoundException e)
+		    catch (Exception e)
 		    {
-				Console.WriteLine("This key handler doesnt exist");
-			    return false;
+		    }
+	    }
+
+	    public bool AddKeyInputHandler(IKeyInput keyInput)
+	    {
+		    RunKey keyRunner = new RunKey(keyInput.run);
+			try
+			{
+				keys[keyInput.key] += keyRunner;
+			}
+			catch (KeyNotFoundException e)
+			{
+				keys.Add(keyInput.key, keyRunner);
+			}
+
+			return true;
+	    }
+
+	    public bool AddKeyInputHandler(Key forKey,Delegate runKey)
+	    {
+		    if (runKey is RunKey keyRunner)
+		    {
+			    try
+				{
+					keys[forKey] += keyRunner;
+				}
+				catch (KeyNotFoundException e)
+				{
+					keys.Add(forKey,keyRunner);
+				}
+				return true;
 		    }
 
-		    return true;
+		    return false;
 	    }
     }
 }
